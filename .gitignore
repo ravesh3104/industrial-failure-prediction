@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# Project-specific: never commit machine-local state
+.streamlit/machine_id_*
+.ipython/
+
+.streamlit/secrets.toml
+
+# NOTE: artifacts/ IS committed on purpose. The deployed dashboard loads
+# models.joblib, results.json and figures/*.png from there instead of
+# retraining, which keeps the public app fast and free-tier friendly.

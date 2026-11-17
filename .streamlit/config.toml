@@ -1,0 +1,29 @@
+[theme]
+base = "dark"
+primaryColor = "#2dd4bf"
+backgroundColor = "#0b1220"
+secondaryBackgroundColor = "#111d31"
+textColor = "#e8eff9"
+
+[server]
+headless = true
+# Behind a reverse proxy (e.g. a cloud preview URL) the Origin/Host headers do
+# not always match, which makes Streamlit reject the WebSocket session - the
+# page then sits on its loading skeleton forever. Setting these to `false`
+# DISABLES those two protections so the websocket handshake succeeds through
+# a proxy. Fine for local/demo use; for a public deployment keep them enabled
+# and set them correctly for your proxy instead.
+enableCORS = false
+enableXsrfProtection = false
+runOnSave = false
+# The project folder is static at runtime; disabling the file watcher avoids
+# unnecessary work and speeds up first render.
+fileWatcherType = "none"
+
+[browser]
+# Never make an outbound analytics call from the app.
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = true

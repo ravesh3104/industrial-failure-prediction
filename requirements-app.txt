@@ -1,0 +1,14 @@
+# Runtime dependencies for the DASHBOARD ONLY.
+#
+# This is deliberately minimal: the deployed app loads pre-trained models from
+# artifacts/models.joblib and pre-rendered charts from artifacts/figures/.
+# It therefore does NOT need matplotlib, seaborn, joblib-dev, jupyter, or
+# nbformat - those are only used to *rebuild* the project (see requirements.txt).
+#
+# Keeping the deploy footprint small means faster builds and far fewer install
+# failures on managed hosts such as Streamlit Community Cloud or Hugging Face.
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+joblib>=1.3
+streamlit>=1.30
